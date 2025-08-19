@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="D:\shamil's portfolio\styles.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header>
+
+        <nav>
+            <a href="D:\shamil's portfolio\index.html" class="active"> Home</a>
+            <a href="D:\shamil's portfolio\mywork.html" >Designs</a>
+            <a href="D:\shamil's portfolio\contact-form.html" >Contact</a>
+
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi, It's <span>Shamil</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Creative Graphic Designer & Digital Marketer skilled in design,
+              branding, and online marketing, aiming to boost brand visibility and
+              business growth</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mohammed-shamil-8b7944371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/shamil__urothodi?igsh=bXI5OGVldGk5OGFx"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="D:\shamil's portfolio\contact-form.html" class="btn">Hire me</a>
+        </div>
+
+        <div class="about-main">
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>    
+                <p class="tab-links" onclick="opentab('Services')">Services</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                    <li><span>Adobe Photoshop</span><br>To create, edit, and enhance visuals that attract and engage audiences across online platforms.</li>
+                    <li><span>Adobe Illustrator</span><br>To design scalable, high-quality graphics like logos, icons, and illustrations for consistent branding across all media.</li>
+                    <li><span>Microsoft Excel</span><br>To organize, analyze, and visualize campaign data for informed marketing decisions.</li>
+                    <li><span>Tally Proficiency</span><br>To manage and track financial transactions, budgets, and expenses for marketing campaigns.</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Services">
+                 <ul>
+                    <li><span>Logo Designing</span><br>Visually represent your brand.</li>
+                    <li><span>Social Media Posters</span><br>Promote and engage your audience.</li>
+                    <li><span>Menu Card Designing</span><br>Showcase your offerings attractively.</li>
+                    <li><span>Resume/CV Designing</span><br>Present your professional career profile.</li>
+                    <li><span>Banner And Flex Designing</span><br>Advertise products or events.</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>Digital Marketing</span><br>Adsin institute,calicut</li>
+                    <li><span>Diploma in Graphic Design</span><br>Adsin Institute, calicut</li>
+                    <li><span>B.Com in Business Process Services</span><br>Sri Krishna Adithya College of arts and science - coimbatore</li>
+                    <li><span>Higher Secondary Education</span><br>IKT Higher Secondary School</li>
+                    <li><span>SSLC</span><br>IKT High school</li>
+                </ul>
+            </div>
+
+        </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script> 
+    </section>   
+</body>
+</html>
