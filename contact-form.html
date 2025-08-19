@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Form</title>
+</head>
+<style>
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+}
+
+.contact-container{
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.title h2{
+    font-weight: 600;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #b74b4b;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+
+.contact-textarea{
+    width: 400px;
+    height: 140px;
+    padding-top: 15px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+
+}
+.contact-textarea:focus{
+    border:2px solid #b74b4b;
+}
+
+.contact-textarea::placeholder{
+    color: #a9a9a9;
+}
+.contact-inputs:focus{
+    border:2px solid #b74b4b;
+}
+
+.contact-inputs::placeholder{
+    color: #a9a9a9;
+}
+.contact-form button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #b74b4b;
+}
+
+@media(max-width:800px){
+    .contact-inputs{
+        width: 80vw;
+    }
+}
+
+
+    </style>
+<body>
+    <div class="contact-container">
+     <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <div class="title">
+            <h2>Let's Get In Touch</h2>
+            <hr>
+        </div>
+         <input type="hidden" name="access_key" value="04071ead-c5f2-4f04-8aee-0f149a4de833">
+        <input type="Text" name="name" placeholder="Your Name" class="contact-inputs" required>
+        <input type="Email" name="email" placeholder="Your Email" class="contact-inputs" required>
+        <textarea name="Message" placeholder="Your Message" class="contact-textarea" required ></textarea>
+        <button type="submit">Submit</button>
+     </form>
+    </div>
+</body>
+</html>
