@@ -24,11 +24,11 @@ body{
 
 header{
     margin-top: 20px;
-    position: fixed;
+
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 9%;
+
     background-color: transparent;
     filter: drop-shadow(10px);
     display: flex;
@@ -54,35 +54,27 @@ nav a.active{
 
 @media(max-width:995px){
     nav{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 40%;
-        border-left: 3px solid #b74b4b;
-        border-bottom: 3px solid #b74b4b;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
-    }
+    display: flex;
+    justify-content: space-between;    
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 0px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
 
-    nav.active{
-        display: block;
     }
-
-    nav a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
+    
 
     nav a:hover,
     nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #b74b4b;
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
     }
+
 }
+
+
 
 section{
     min-height: 100vh;
@@ -115,6 +107,7 @@ span{
 
 .home-content p{
     font-size: 1.6rem;
+    padding-top: 40px;
 }
 
 .social-icons a{
@@ -227,7 +220,7 @@ span{
 }
 
 .about-main{
-    padding: 80px 80px;
+    padding-right:80px ;
     position: relative;
     left: 50px;
 }
@@ -282,4 +275,4 @@ span{
 .tab-contents.active-tab{
     display: block;
 }
-
+}
